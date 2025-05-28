@@ -30,7 +30,7 @@ public class Main {
                 case 3 -> soChinhPhuong();
                 case 4 -> soNguyenTo();
                 case 5 -> checkOddOrEven();
-//                    case 6 -> calDtCvHCN();
+                case 6 -> calDtCvHCN();
 //                    case 7 -> calculateInterest();
                 default -> System.out.println("Nhập lại lựa chọn!");
             }
@@ -49,6 +49,17 @@ public class Main {
         int number = scanner.nextInt();
         System.out.print("Number is " + (number % 2 == 0 ? "even" : "odd"));
     }
+
+    public static void calDtCvHCN(){
+        System.out.print("Enter canh A:  ");
+        float canhA = scanner.nextFloat();
+        System.out.print("Enter canh B:  ");
+        float canhB = scanner.nextFloat();
+        System.out.println("Chu vi HCN la: " + ((canhA + canhB)*2));
+        System.out.println("Dien tich HCN la: " + (canhA * canhB));
+        System.out.println("Canh nho HCN la: " + (Math.min(canhA, canhB)));
+    }
+
     public static void calculator(){
         float a,b;
         while(true) {
