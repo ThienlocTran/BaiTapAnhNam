@@ -31,7 +31,7 @@ public class Main {
                 case 4 -> soNguyenTo();
                 case 5 -> checkOddOrEven();
                 case 6 -> calDtCvHCN();
-//                    case 7 -> calculateInterest();
+                case 7 -> calculateInterest();
                 default -> System.out.println("Nhập lại lựa chọn!");
             }
         }while (choice != 0) ;
@@ -58,6 +58,37 @@ public class Main {
         System.out.println("Chu vi HCN la: " + ((canhA + canhB)*2));
         System.out.println("Dien tich HCN la: " + (canhA * canhB));
         System.out.println("Canh nho HCN la: " + (Math.min(canhA, canhB)));
+    }
+
+    public static void calculateInterest(){
+/*        Bài 4
+        Tính lãi suất gửi ngân hàng (có sử dụng vòng lặp):
+        Công thức tính:
+        Lãi suất = (P × R × T) / 100
+        Trong đó:
+        P: Số tiền gốc
+        R: Lãi suất mỗi năm (ví dụ: 8%)
+        T: Thời gian gửi (tính bằng năm)
+        Yêu cầu:
+        Cho phép người dùng nhập vào các giá trị P, R, T
+        Tính và in ra lãi suất
+        Lặp lại việc tính toán nếu người dùng muốn tiếp tục.*/
+        Double P = 0.0;
+        Double R = 0.0;
+        Integer T = 0;
+        String choice ="";
+        do{
+            System.out.print("Enter P : ");
+            P = scanner.nextDouble();
+            System.out.print("Enter R : ");
+            R = scanner.nextDouble();
+            System.out.print("Enter T : ");
+            T = scanner.nextInt();
+            System.out.println("Interest is " + ((P * (R / 100) * T)/100));
+            System.out.println("Do you want to calculate interest ? (Y/N)");
+            choice = scanner.next();
+        }while(choice.equalsIgnoreCase("Y"));
+
     }
 
     public static void calculator(){
